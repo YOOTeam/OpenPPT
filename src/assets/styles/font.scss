@@ -1,0 +1,81 @@
+// $fontList: '仓耳小丸子',
+// '优设标题黑',
+// '字制区喜脉体',
+// '峰广明锐体',
+// '得意黑',
+// '摄图摩登小方体',
+// '站酷快乐体',
+// '素材集市康康体',
+// '素材集市酷方体',
+// '途牛类圆体',
+// '锐字真言体';
+
+
+
+$fontListTFF: 'Alibaba-PuHuiTi-B',
+'Alibaba-PuHuiTi-M',
+'AskAboutTheStudyRoom',
+'CharacterFanghuaStyle',
+'ChinesePinyinSystem',
+'DelaBlackBody',
+'FaultOfBlackBodyH2',
+'FontSpecialStyle',
+'HarmonyOS-Sans-SC-Black',
+'HuangLingdongQiJiReproduction',
+'JiangchengRhythmBlack',
+'JiangxiZhuokai',
+'MiSans-Bold',
+'MiSans-Heavy',
+'MiSans-Light',
+'MiSans-Medium',
+'MiSans-Regular',
+'OPPOSans-Heavy',
+'OptimalTitleCircle',
+'PangmenZhengdaoFineLineBody',
+'PangmenZhengdaoTitleStyle',
+'ResourceHanRoundedCN-Heavy',
+'SmallCheeseBody',
+'StandCoolHappyBody',
+'StationCoolCangYuyangTi-W05',
+'StationCoolRegular',
+'XiaWuManHei',
+'YoushiBangBangBody',
+'ZhiyongSimplifiedChinese',
+'ZhuojianOliveSimplified',
+'ZiSystemXiMaiTi',
+'ZiTiChuanQiNanAnTi-MianFeiShangYong-2';
+
+$fontListOTF: 'CangJiGaoGermanMiaoHei',
+'JingnanMarginSilentBody',
+'MakerStickersDiamondBody',
+'SourceHanSansCN-Bold1';
+
+
+$font-url: "https://image.static.yoojober.cn/web/editor/assets" !default;
+
+
+@each $fonts in $fontListTFF {
+  @font-face {
+    font-display: swap;
+    font-family: $fonts;
+    src: url('#{$font-url}/fonts/#{$fonts}.ttf');
+  }
+}
+
+@each $fonts in $fontListOTF {
+  @font-face {
+    font-display: swap;
+    font-family: $fonts;
+    src: url('#{$font-url}/fonts/#{$fonts}.otf');
+  }
+}
+
+
+@font-face {
+  font-family: "UnidreamLED";
+  src: url(../NumFont/UnidreamLED.eot);
+  /***兼容ie9***/
+  src: url(../NumFont/UnidreamLED.eot?#iefix) format("embedded-opentype"),
+    /***兼容ie6-ie8***/
+    url("../NumFont/UnidreamLED.woff") format("woff"),
+}

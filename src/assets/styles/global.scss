@@ -1,0 +1,349 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: transparent;
+  color: $textColor;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+  content: '';
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+  color: $themeColor;
+}
+
+img {
+  vertical-align: middle;
+  border-style: none;
+}
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+mark.active {
+  background-color: #ff9632;
+}
+
+input,
+button,
+select,
+optgroup,
+textarea {
+  color: inherit;
+}
+
+button,
+input {
+  overflow: visible;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+textarea {
+  overflow: auto;
+  resize: vertical;
+}
+
+a,
+area,
+button,
+[role='button'],
+input:not([type='range']),
+label,
+select,
+summary,
+textarea {
+  touch-action: manipulation;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #c1c1c1;
+  border-radius: 3px;
+}
+
+
+.drageModal {
+  border-radius: 10rem;
+  font-size: 14rem;
+  color: #1A1A1A;
+  transition: opcacity 0.3s ease-in-out;
+}
+
+.drageModal-title {
+  font-size: 14rem;
+  color: #3D3D3D;
+  margin-bottom: 10rem;
+}
+
+
+
+.toobar-title {
+  margin: 10rem 0;
+  color: #4e4e4e;
+}
+
+.arco-btn {
+  &.lineBtn {
+    border-radius: 6rem;
+    color: $themeColor;
+    border-color: $lightColor;
+    font-size: 14rem;
+    padding: 0 15rem;
+    height: 32rem;
+  }
+}
+
+.node-style-box {
+  @include drage-modal-layout();
+}
+
+.mode-tips-title {
+  display: flex;
+  margin-bottom: 10rem;
+
+  span {
+    font-family: Alibaba PuHuiTi 2.0;
+    font-size: 16rem;
+    font-weight: 500;
+    line-height: 28rem;
+    letter-spacing: 0em;
+    color: $themeColor;
+    border-bottom: 2px solid $themeColor;
+    padding: 0 2rem;
+  }
+
+}
+
+.toobar-icon-sizes {
+  font-size: 16rem !important;
+}
+
+.toobar-icon-sizes14 {
+  font-size: 12rem !important;
+}
+
+.toolbar-title-mobile {
+  font-size: 14rem;
+  padding: 5rem 10rem;
+}
+
+.font-size-btn.button.default {
+  padding: 0;
+  color: #41464b;
+}
+
+.btn-color.button.default {
+  color: #41464b;
+}
+
+// 禁止编辑器时 修正换行的问题
+.ProseMirror-static {
+  p:empty::after {
+    content: "\A";
+    /* \A 是换行符 */
+    white-space: pre;
+    /* 确保换行符生效 */
+  }
+}
+
+.leveName {
+  padding: 5rem 10rem;
+  border-radius: 6rem;
+  color: #1A1A1A;
+  background: #F6F6F6;
+}
+
+.avatar-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+
+  img {
+    width: 100%;
+    height: auto;
+    top: 0px;
+    left: 50%;
+    transform: translate(-50%, 0px) scale(1);
+    position: relative;
+  }
+}
+// 定义view transition动画效果
+::view-transition-old {
+  transition: all 0.5s ease-in-out;
+}
+
+::view-transition-new {
+ transition: all 0.5s ease-in-out; 
+}
+
+// 滑出动画
+@keyframes slide-out {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.8) translate(0, 20px);
+  }
+}
+
+// 滑入动画
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: scale(0.8) translate(0, -20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

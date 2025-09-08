@@ -1,0 +1,101 @@
+@mixin ellipsis-oneline() {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+@mixin ellipsis-multiline($line: 2) {
+  word-wrap: break-word;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $line;
+  -webkit-box-orient: vertical;
+}
+
+@mixin flex-grid-layout() {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+@mixin flex-grid-layout-children($col, $colWidth) {
+  width: $colWidth;
+  margin-bottom: calc(#{100 - $col * $colWidth} / #{$col - 1});
+
+  &:not(:nth-child(#{$col}n)) {
+    margin-right: calc(#{100 - $col * $colWidth} / #{$col - 1});
+  }
+}
+
+@mixin overflow-overlay() {
+  overflow: auto;
+  overflow: overlay;
+}
+
+@mixin absolute-0() {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+
+@mixin drage-modal-layout {
+  width: $drageModalWidth;
+  max-height: calc(100vh - 220rem);
+  overflow-x: hidden;
+  overflow-y: auto;
+  margin-top: -12rem;
+  padding: 15rem;
+  padding-top: 0;
+}
+
+@mixin mobile-element-toolber {
+  width: 100%;
+  position: absolute;
+  z-index: 99;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  animation: slideInUpMobile 0.15s;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+
+  .tabs {
+    font-size: 18rem !important;
+  }
+}
+
+
+@keyframes slideInUpMobile {
+  from {
+    transform: translateY(100%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* 不支持 constant(safe-area-inset-bottom) 的设备 */
+@supports not (constant(safe-area-inset-bottom)) {
+
+  /* 备用样式 */
+  .footer {
+    padding-bottom: 20rem;
+  }
+}
+
+/* 不支持 env(safe-area-inset-bottom) 的设备 */
+@supports not (env(safe-area-inset-bottom)) {
+
+  /* 备用样式 */
+  .footer {
+    padding-bottom: 20rem;
+  }
+}
