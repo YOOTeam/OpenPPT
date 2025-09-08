@@ -426,7 +426,7 @@ npm run dev
 
 # 🔔致谢&补充
 
-The foundation of this project comes from [**PPList**]( https://github.com/pipipi-pikachu/PPTist). Thank you very much to the original author and the open source community for sharing and contributing to the project. Due to the foundation project's use in web applications, this project has received great support and upgrade space.
+本项目基座出自 [**PPTist**](https://github.com/pipipi-pikachu/PPTist) 项目，非常感谢原作者与开源社区的分享与贡献，因基座项目在Web应用上的，让本项目得到了极大的支持与升级空间。
 
 
 为了更好用户体验与提升产品完整度，本项目特色升级部分定义如下：

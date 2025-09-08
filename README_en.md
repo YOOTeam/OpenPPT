@@ -410,7 +410,8 @@ Access: http://localhost:5173/
 ---
 
 # 🔔 Acknowledgements
-Based on https://github.com/pipipi-pikachu/PPTist with major enhancements:
+The foundation of this project comes from [**PPList**]( https://github.com/pipipi-pikachu/PPTist). Thank you very much to the original author and the open source community for sharing and contributing to the project. 
+
 In order to improve user experience and enhance product integrity, the upgraded features of this project are defined as follows:
 > <b> 🔥 Series 1: [Experience and Interaction Upgrade]</b>
 
