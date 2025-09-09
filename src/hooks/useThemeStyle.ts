@@ -18,6 +18,7 @@ import {
   getOnePageDetail,
   getNewPageTemplat,
   canceltask,
+  selectPage,
 } from '@/api/careate'
 import useCommonApi from './useCommonApi'
 import moment from 'moment'
@@ -2044,6 +2045,9 @@ export default () => {
     } catch (error) {
       disableClickBtn.value = false
     }
+    selectPage({
+      page: slidesStore.slides.length,
+    })
   }
 
   const initAddTheme = () => {

@@ -1,6 +1,11 @@
 import { storeToRefs } from 'pinia'
 import { useSlidesStore, useMainStore } from '@/store'
-import { createnote, getRunChat, translateText } from '@/api/careate'
+import {
+  createnote,
+  getRunChat,
+  translateText,
+  selectNote,
+} from '@/api/careate'
 import { onUploads } from '@/utils/upload'
 import useExport from '@/hooks/useExport'
 import { ref, onBeforeUnmount, watch, computed } from 'vue'
@@ -134,6 +139,15 @@ export default () => {
       }
 
       getJsonDataInfo(useFileId.value)
+      if (type === 2) {
+        selectNote({
+          page: slidesStore.slides.length,
+        })
+      } else {
+        selectNote({
+          page: 1,
+        })
+      }
     } else {
       createSpeechData.value.status = 'error'
       mainStore.setShowLoadingMarks(false)

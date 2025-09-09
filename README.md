@@ -394,7 +394,7 @@
 ## 💻 1. 下载源代码
 可以直接访问在Github进行对应代码的下载或者Clone，且维持习惯性的更新（本项目将持续更新和迭代）。
 ```
-gitclone https://github.com/YOOTeam/OpenPPT.git ./OpenPPT
+git clone https://github.com/YOOTeam/OpenPPT.git ./OpenPPT
 ```
 
 Github访问地址：https://github.com/YOOTeam/OpenPPT

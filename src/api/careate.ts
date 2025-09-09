@@ -55,7 +55,28 @@ export function motionresource(query: any) {
     },
   })
 }
-
+export function selectPage(query: any) {
+  return request({
+    url: '/open-ppt/c-service',
+    method: 'post',
+    data: {
+      method: 'get',
+      service: 'selectPage',
+      params: JSON.stringify(query),
+    },
+  })
+}
+export function selectNote(query: any) {
+  return request({
+    url: '/open-ppt/c-service',
+    method: 'post',
+    data: {
+      method: 'get',
+      service: 'selectNote',
+      params: JSON.stringify(query),
+    },
+  })
+}
 // Image Generate1
 export function textToImgApiPost(query: any) {
   return request({

@@ -457,6 +457,7 @@ import ThumbnailSlide from '@/views/components/ThumbnailSlide/index.vue'
 import Switch from '@/components/Switch.vue'
 import Button from '@/components/Button.vue'
 import Tabs from '@/components/Tabs.vue'
+import { selectPage } from '@/api/careate'
 import PoolOpenModal from '@/components/PoolOpenModal.vue'
 import { nanoid } from 'nanoid'
 import useThemeStyle from '@/hooks/useThemeStyle'
@@ -680,6 +681,9 @@ const insertTemplate = (slide: Slide) => {
     sessionStorage.setItem('singlePageId', JSON.stringify(data))
     mainStore.setShowToolbar(false)
     mainStore.setOpenNoTokenToobal(false)
+    selectPage({
+      page: '1',
+    })
   }
 }
 

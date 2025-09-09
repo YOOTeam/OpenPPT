@@ -18,7 +18,7 @@ import useSaveJSON from '@/hooks/useSaveJSON'
 import { cancelRequestsWithPrefix, returnCancel } from '@/utils/HttpRequest'
 import { fetchUrl } from '@/utils/common'
 import { beautifyResult } from '@/api/pinganApi'
-import { viewThemeModle, canceltask } from '@/api/careate'
+import { viewThemeModle, canceltask, selectPage } from '@/api/careate'
 import { onUploads } from '@/utils/upload'
 import useInitSlides from '@/hooks/useInitSlides'
 import { nanoid } from 'nanoid'
@@ -841,7 +841,9 @@ export default () => {
     if (!beautifyEnd.value) {
       return
     }
-
+    selectPage({
+      page: slidesStore.slides.length,
+    })
     const themeData: any = themeDatas.value
     const pptInfo: any = slideInfo.value.info
     pptInfo.style = themeData.style
