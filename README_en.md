@@ -44,11 +44,11 @@ Playing
 
 Video Demo（Import/Beautify Slide/Player）
 
-[演示视频](./static/demo02.mp4)
+[Demo 01](https://image.yoojober.com/upload-m/2025-09/68c0ae985f60d.mp4)
 
-[演示视频](./static/demo03.mp4)
+[Demo 02](https://image.yoojober.com/upload-m/68c0aeaa9edf1.mp4)
 
-[演示视频](./static/demo01.mp4)
+[Demo 03](https://image.yoojober.com/upload-m/2025-09/68c0ae6b0dd82.mp4)
 
 **🎉 Mobile**  
 
