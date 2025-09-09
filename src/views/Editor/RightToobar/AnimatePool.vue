@@ -292,17 +292,17 @@ const useBtn = ref(false)
 
 const iconList = [
   {
-    lable: '默认显示',
+    lable: t('animatePool.defaultShow'),
     icon: 'icon-morenxianshi',
     type: 'default',
   },
   {
-    lable: '交互显示',
+    lable: t('animatePool.interactiveShow'),
     icon: 'icon-jiaohuxianshi',
     type: 'clickZoom',
   },
   {
-    lable: '无交互',
+    lable: t('animatePool.noInteraction'),
     icon: 'icon-wujiaohuxianshi',
     type: 'none',
   },
