@@ -44,11 +44,21 @@ Playing
 
 Video Demo（Import/Beautify Slide/Player）
 
-[Demo 01](https://image.yoojober.com/upload-m/2025-09/68c0ae985f60d.mp4)
 
-[Demo 02](https://image.yoojober.com/upload-m/68c0aeaa9edf1.mp4)
+[Demo-Upload Local Slides](https://image.yoojober.com/upload-m/2025-09/68c0ae985f60d.mp4)
 
-[Demo 03](https://image.yoojober.com/upload-m/2025-09/68c0ae6b0dd82.mp4)
+https://github.com/user-attachments/assets/3b67e1a8-d7d7-47fb-8824-f7705eb5c89e
+
+
+[Demo-Beautify Slides](https://image.yoojober.com/upload-m/68c0aeaa9edf1.mp4)
+
+https://github.com/user-attachments/assets/51e1fb65-dc37-4776-bd0a-f31c1870187d
+
+
+[Demo-Playing](https://image.yoojober.com/upload-m/2025-09/68c0ae6b0dd82.mp4)
+
+https://github.com/user-attachments/assets/2ae68dd0-c82d-4c14-83b3-0f976c8e4201
+
 
 **🎉 Mobile**  
 

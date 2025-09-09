@@ -39,13 +39,20 @@
 
 视频Demo（导入/美化/播放）
 
-[演示视频](https://image.yoojober.com/upload-m/2025-09/68c0ae985f60d.mp4)
+[Demo-导入文件](https://image.yoojober.com/upload-m/2025-09/68c0ae985f60d.mp4)
+https://github.com/user-attachments/assets/3b67e1a8-d7d7-47fb-8824-f7705eb5c89e
 
-https://image.yoojober.com/upload-m/2025-09/68c0ae985f60d.mp4
 
-[演示视频](https://image.yoojober.com/upload-m/68c0aeaa9edf1.mp4)
 
-[演示视频](https://image.yoojober.com/upload-m/2025-09/68c0ae6b0dd82.mp4)
+
+[Demo-美化幻灯片](https://image.yoojober.com/upload-m/68c0aeaa9edf1.mp4)
+
+https://github.com/user-attachments/assets/51e1fb65-dc37-4776-bd0a-f31c1870187d
+
+
+[Demo-播放幻灯片](https://image.yoojober.com/upload-m/2025-09/68c0ae6b0dd82.mp4)
+
+https://github.com/user-attachments/assets/2ae68dd0-c82d-4c14-83b3-0f976c8e4201
 
 <p align="left">🎉移动端🎉</p>
 
