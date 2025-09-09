@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="renderer" content="webkit" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-control" content="no-cache" />
+    <meta http-equiv="Cache" content="no-cache" />
+    <meta
+      name="description"
+      content="ChatPPT为必优科技旗下国内AI生成PPT的办公产品，基于AI Chat指令式内容生成与创作，辅助职场办公人工更高效去创作PPT文档，目前接入超过350+指令集，可以在1分钟内完成全篇PPT生成、设计与排版。"
+    />
+    <meta name="keywords" content="ChatPPT,AI写PPT,一键生成PPT,智能美化" />
+    <title></title>
+    <link rel="icon" href="/favicon.ico?v=<%= timestamp %>" />
+    <script src="/config.js?t=<%= timestamp %>"></script>
+    <style>
+      .first-screen-loading {
+        width: 200px;
+        height: 200px;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        margin-top: -100px;
+        margin-left: -100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .first-screen-loading-spinner {
+        width: 50px;
+        height: 50px;
+        border: 5px solid #4e3eff;
+        border-top-color: transparent;
+        border-radius: 50%;
+        animation: spinner 0.8s linear infinite;
+      }
+
+      .first-screen-loading-text {
+        margin-top: 20px;
+        color: #d14424;
+      }
+
+      @keyframes spinner {
+        0% {
+          transform: rotate(0deg);
+        }
+
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app">
+      <div class="first-screen-loading">
+        <div class="first-screen-loading-spinner"></div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts?v=<%= timestamp %>"></script>
+  </body>
+
+  <script>
+    document.oncontextmenu = (e) => e.preventDefault()
+  </script>
+</html>

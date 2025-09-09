@@ -51,7 +51,7 @@ export default {
   catalog: {
     titleTab1: '大纲',
     titleTab2: '幻灯片',
-    addPPT: 'AI生成/新建页面',
+    addPPT: '新建页面',
     page: '页',
     cup: '剪切',
     copy: '复制',

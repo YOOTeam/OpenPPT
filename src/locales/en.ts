@@ -52,7 +52,7 @@ export default {
   catalog: {
     titleTab1: 'Outline',
     titleTab2: 'Slides',
-    addPPT: '✨AI Slide',
+    addPPT: '✨New Slide',
     page: 'Slide',
     cup: 'Cut',
     copy: 'Copy',
