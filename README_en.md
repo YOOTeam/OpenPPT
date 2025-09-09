@@ -42,6 +42,14 @@ Playing
 <img src="./static/pc2.png" alt="logo" style="border-radius: 5px;border-color: #fff;border-style: solid;" />
 
 
+Video Demo（Import/Beautify Slide/Player）
+
+[演示视频](./static/demo02.mp4)
+
+[演示视频](./static/demo03.mp4)
+
+[演示视频](./static/demo01.mp4)
+
 **🎉 Mobile**  
 
 <img src="./static/phone.png" alt="logo" style="border-radius: 5px;border-color: #fff;border-style: solid;" />

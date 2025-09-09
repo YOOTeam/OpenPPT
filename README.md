@@ -37,6 +37,14 @@
 <img src="./static/pc1.png" alt="logo" style="border-radius: 5px;border-color: #fff;border-style: solid;" />
 <img src="./static/pc2.png" alt="logo" style="border-radius: 5px;border-color: #fff;border-style: solid;" />
 
+视频Demo（导入/美化/播放）
+
+[演示视频](./static/demo02.mp4)
+
+[演示视频](./static/demo03.mp4)
+
+[演示视频](./static/demo01.mp4)
+
 <p align="left">🎉移动端🎉</p>
 
 <img src="./static/phone.png" alt="logo" style="border-radius: 5px;border-color: #fff;border-style: solid;" />
