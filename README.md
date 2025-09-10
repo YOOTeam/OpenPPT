@@ -21,7 +21,7 @@
 # ✨ OpenPPT
 > OpenPPT，一款基于Web化服务的在线演示文稿的智能PPT应用，旨在通过在线化网页打造Office幻灯片的全流程创作服务。支持PPT创作从空白新建（导入/AI生成）、编辑（文本/线条/形状/图片/图片/表格/图表/公式/网页/备注等）、美化排版、播放、演讲、动画展示，到导出下载全流程的服务；而且在文档格式上兼容包括微软、金山WPS、OpenOffice等主流Office产品，可以轻松实现将主流Office文档文件，一键导入转换为在线文档，同时也可以支持将在线创作的内容导出为Office格式。同时，产品将包括AI生成、AI辅写、AI演讲、AI排版美化等特色智能服务深度集成在应用中，可以便于用户轻松体验智能化办公服务。
  
- > 项目核心服务来源自产品 [ChatPPT](www.chatppt.cn) ，且项目将持续跟进其迭代版本，即从核心功能与体验上，都将尽可能实现对齐和开源化升级，故请持续关注与随时提出你的项目要求。
+ > 项目核心服务来源自产品 [ChatPPT](https://www.chatppt.cn?channel=github-openppt) ，且项目将持续跟进其迭代版本，即从核心功能与体验上，都将尽可能实现对齐和开源化升级，故请持续关注与随时提出你的项目要求。
 
 <b>👉示例体验：[https://open.chatppt.cn](https://open.chatppt.cn?channel=github-openppt)</b>
 
@@ -470,9 +470,9 @@ npm run dev
 - 本项目仅为交流学习使用，项目协议为 **[AGPL-3.0 协议](https://www.gnu.org/licenses/agpl-3.0.html)**, 禁止闭源商用，请尊重开源。
 - 如果你有相关商用需求，可以联系我们进行 **商业授权**；同时我们也有专属的商业AI PPT软件版本，支持API、代理服务、系统集成、私有部署等方式。
 
-    **🏟 企业合作官网**：[www.yoo-ai.com](http://www.yoo-ai.com)
+    **🏟 企业合作官网**：[www.yoo-ai.com](https://www.yoo-ai.com)
 
-    **📖 Wiki-API文档**：[wiki.yoo-ai.com](http://wiki.yoo-ai.com)
+    **📖 Wiki-API文档**：[wiki.yoo-ai.com](https://wiki.yoo-ai.com)
 
 ---
 

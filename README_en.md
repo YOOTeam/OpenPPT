@@ -20,9 +20,9 @@
 # ✨ OpenPPT
 > OpenPPT, an intelligent PPT application based on web-based services for online presentations, aims to provide full-process creation services for Office slides through online web pages. It supports the entire process of PPT creation from blank creation (import), editing (text/lines/shapes/images/tables/charts/formulas/web pages/notes, etc.), beautification layout, playback, presentation, animation display, to export and download. Moreover, in terms of document format, it is compatible with mainstream Office products including Microsoft, Kingsoft WPS, OpenOffice, etc., easily enabling the import and conversion of mainstream Office document files into online documents, while also supporting the export of online creations to Office formats. Additionally, the product deeply integrates unique intelligent services including AI generation, AI-assisted writing, AI presentation, AI layout beautification, etc. into the application, allowing users to easily experience intelligent office services.
  
- > The core services of the project originate from the product www.chatppt.cn, and the project will continuously follow its iterative versions, meaning that in terms of core functionality and experience, it will strive to achieve alignment and open-source upgrades as much as possible. Therefore, please stay tuned and feel free to propose your project requirements at any time.
+ > The core services of the project originate from the product [www.chatppt.cn](https://www.chatppt.cn?channel=github-openppt), and the project will continuously follow its iterative versions, meaning that in terms of core functionality and experience, it will strive to achieve alignment and open-source upgrades as much as possible. Therefore, please stay tuned and feel free to propose your project requirements at any time.
 
-<b>👉 Example Experience: https://open.chatppt.cn?channel=github-openppt</b>
+<b>👉 Example Experience: [https://open.chatppt.cn](https://open.chatppt.cn?channel=github-openppt)</b>
 
 ---
 
@@ -455,8 +455,10 @@ In short, the implementation of this project will change due to changes in under
  - This project is only for communication and learning purposes, and the project protocol is [**AGPL-3**](https://www.gnu.org/licenses/agpl-3.0.html) Prohibit closed source commercial use, please respect open source.
 - If you have relevant commercial needs, you can contact us for * * commercial authorization * *; We also have a dedicated commercial AI PPT software version that supports APIs, proxy services, system integration, private deployment, and other methods.
   
-  **🏟 Enterprise Portal**: http://www.yoo-ai.com  
-  **📖 API Documentation**: http://wiki.yoo-ai.com
+  **🏟 Enterprise Portal**: [www.yoo-ai.com](https://www.yoo-ai.com)
+
+  **📖 API Documentation**: [wiki.yoo-ai.com](https://wiki.yoo-ai.com)
+
 
 ---
 
