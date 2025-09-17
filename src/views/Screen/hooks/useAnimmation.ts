@@ -154,10 +154,7 @@ export default () => {
         ...(currentSlide.value?.actionList?.defaultElementIds || []),
       ]
       const isHidden = hiddenAndDefaultIds.includes(elementId)
-      if (
-        excludeTypes.includes(element?.tags?.custom?.shape_type) &&
-        isHidden
-      ) {
+      if (isHidden) {
         return
       }
 
@@ -173,12 +170,13 @@ export default () => {
         ]
 
         const isHidden = hiddenAndDefaultIds.includes(id)
-        // 检查元素是否包含excludeTypes类型且不包含actionAnimationShow类，不包含时才添加hover
+        // 对于group元素（包括group_index），不检查excludeTypes
+        const isGroupElement =
+          element.groupId || element.tags?.custom?.group_index
         if (
           targetElement &&
-          !excludeTypes.includes(targetElement?.tags?.custom?.shape_type) &&
-          !$targetElement.hasClass('actionAnimationShow') &&
-          !isHidden
+          !isHidden &&
+          !$targetElement.hasClass('actionAnimationShow')
         ) {
           $targetElement.addClass('hover')
         }
@@ -194,18 +192,20 @@ export default () => {
         (el) => el.id === elementId
       )
       if (!element) return
-      // 过滤掉excludeTypes类型的元素
-      if (excludeTypes.includes(element?.tags?.custom?.shape_type)) return
 
+      // 对于group_index元素，不检查excludeTypes，确保能正确移除所有同组元素的悬停效果
       const sameGroupIds = getSameGroupElementIds(element)
       sameGroupIds.forEach((id) => {
         const targetElement = slides.value[slideIndex.value]?.elements?.find(
           (el) => el.id === id
         )
-        // 检查元素是否包含excludeTypes类型，不包含时才移除hover
+        // 对于group元素，不检查excludeTypes
+        const isGroupElement =
+          element.groupId || element.tags?.custom?.group_index
         if (
           targetElement &&
-          !excludeTypes.includes(targetElement?.tags?.custom?.shape_type)
+          (isGroupElement ||
+            !excludeTypes.includes(targetElement?.tags?.custom?.shape_type))
         ) {
           $(`#screen-element-${id}`).removeClass('hover')
         }
@@ -214,8 +214,26 @@ export default () => {
 
     // 获取同组元素ID的辅助函数
     function getSameGroupElementIds(element: any) {
-      // 处理group_index情况
-      if (element.tags?.custom?.group_index) {
+      // 先处理groupId
+      if (element.groupId) {
+        const sameGroupElements = slides.value[
+          slideIndex.value
+        ]?.elements.filter((el) => el.groupId === element.groupId)
+
+        // 如果同组元素中存在group_index，则根据group_index进一步筛选
+        if (element.tags?.custom?.group_index) {
+          return sameGroupElements
+            .filter(
+              (el) =>
+                el.tags?.custom?.group_index === element.tags.custom.group_index
+            )
+            .map((el) => el.id)
+        }
+
+        return sameGroupElements.map((el) => el.id)
+      }
+      // 没有groupId时，单独处理group_index情况
+      else if (element.tags?.custom?.group_index) {
         return slides.value[slideIndex.value].elements
           .filter(
             (el) =>
@@ -223,13 +241,6 @@ export default () => {
           )
           .map((el) => el.id)
       }
-      // 处理groupId情况
-      if (element.groupId) {
-        return slides.value[slideIndex.value]?.elements
-          .filter((el) => el.groupId === element.groupId)
-          .map((el) => el.id)
-      }
-
       // 普通元素
       return [element.id]
     }
@@ -370,13 +381,23 @@ export default () => {
 
     // 使用nextTick确保DOM已更新
 
-    // 处理组元素
+    // 先处理groupId
     if (targetElement.groupId) {
       // 查找同组所有元素
-      const sameGroupElements = slide.elements.filter(
+      let sameGroupElements = slide.elements.filter(
         (element: any) => element.groupId === targetElement.groupId
       )
-      // 为同组元素添加动画样式
+
+      // 如果目标元素有group_index，则在同组元素中进一步筛选相同group_index的元素
+      if (targetElement?.tags?.custom?.group_index) {
+        sameGroupElements = sameGroupElements.filter(
+          (element: any) =>
+            element.tags?.custom?.group_index ===
+            targetElement.tags.custom.group_index
+        )
+      }
+
+      // 为筛选后的同组元素添加动画样式
       sameGroupElements.forEach((element: any) => {
         const elRef: HTMLElement | null = document.querySelector(
           `#screen-element-${element.id}`
@@ -389,6 +410,7 @@ export default () => {
             currentSlide.value?.actionList?.hiddenElementsIds?.includes(
               elementId
             )
+          // 对于groupId的元素，不检查excludeTypes
           if (!isHidden) {
             elRef.classList.add('actionAnimationShow')
             elRef.children[0].classList.add('actionAnimationStyle')
@@ -396,7 +418,7 @@ export default () => {
         }
       })
     }
-    // 处理具有group_index标签的元素
+    // 没有groupId时，单独处理group_index标签的元素
     else if (targetElement?.tags?.custom?.group_index) {
       const sameGroupElements = slide.elements.filter(
         (element: any) =>
@@ -411,18 +433,12 @@ export default () => {
           const elementId = elRef
             .getAttribute('id')
             ?.replace('screen-element-', '')
-          const element = slides.value[slideIndex.value]?.elements?.find(
-            (el) => el.id === elementId
-          )
           const isHidden =
             currentSlide.value?.actionList?.hiddenElementsIds?.includes(
               elementId
             )
-          const addStyle =
-            element &&
-            !excludeTypes.includes(element?.tags?.custom?.shape_type) &&
-            !isHidden
-          if (addStyle) {
+          // 对于group_index的元素，不检查excludeTypes
+          if (!isHidden) {
             elRef.classList.add('actionAnimationShow')
             elRef.children[0].classList.add('actionAnimationStyle')
           }
@@ -512,6 +528,7 @@ export default () => {
           if (clickElementId) {
             activeIndex.value = filteredElements.value.indexOf(clickElementId)
           }
+          console.log(activeIndex.value, 'activeIndex.value')
           // 3.激活当前元素
           activeElements = filteredElements.value[activeIndex.value]
           activeElement(activeElements)
