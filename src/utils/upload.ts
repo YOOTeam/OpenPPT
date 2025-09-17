@@ -1,4 +1,4 @@
-import { uploads, uploadPut } from '@/api/userInfo'
+import { uploads, uploadPut, uploadsPPT } from '@/api/userInfo'
 import { BosClient } from '@baiducloud/sdk'
 import { fileMd5Sum } from './common'
 
@@ -22,8 +22,12 @@ export const onUploads = async (
     if (fileMd5) {
       params.hash = fileMd5
     }
-
-    const data: any = await uploads(params, requestId)
+    let data: any
+    if (params.type === 'userChatPptTempFile') {
+      data = await uploadsPPT(params, requestId)
+    } else {
+      data = await uploads(params, requestId)
+    }
     let result
     const client = new BosClient({})
 
