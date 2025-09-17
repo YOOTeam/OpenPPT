@@ -346,7 +346,7 @@ export function beautifyUpload(query: any) {
     method: 'post',
     data: {
       method: 'post',
-      service: 'beautify',
+      service: 'importBeauty',
       params: JSON.stringify(query),
     },
   })
