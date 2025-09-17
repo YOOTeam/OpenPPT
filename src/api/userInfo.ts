@@ -6,7 +6,7 @@ export function uploads(query: any, requestId?: string) {
     method: 'post',
     data: {
       method: 'get',
-      service: 'token',
+      service: 'uploadPPT',
       params: JSON.stringify(query),
     },
     requestId,

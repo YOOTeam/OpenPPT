@@ -3900,6 +3900,9 @@ export default () => {
         is_cache: openDrawing.value ? 'False' : 'OnlyCache',
         request_id: request_id || requestID,
       }
+      if (openDrawing.value === false) {
+        return
+      }
       const imgRes: any = await getTextToImg(data)
       if (imgRes?.data?.img_path) {
         imgList = imgRes.data.img_path
